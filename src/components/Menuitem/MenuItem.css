@@ -1,0 +1,80 @@
+.app__menuitem {
+    width: 100%;
+    margin: 0.75rem 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.app__menuitem-head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.app__menuitem-name {
+    flex: 1;
+    font-weight: 600;
+    color: var(--color-golden);
+    flex-wrap: nowrap;
+}
+
+.app__menuitem-dash {
+    width: 80px;
+    justify-content: flex-start;
+    height: 1px;
+    background-color: var(--color-golden);
+    margin: 10px;
+    flex-shrink: 0;
+}
+
+.app__menuitem-price {
+    display: flex;
+    flex-shrink: 0;
+    text-align: right;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    color: var(--color-black);
+}
+
+.app__menuitem-sub {
+    width: 100%;
+    margin-top: 0.5rem;
+    color: #AAAAAA;
+    font-size: 0.95rem;
+}
+
+.app__specialMenu-menu_heading {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-golden);
+    font-weight:600;
+    line-height: 58.5px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .app__menuitem {
+        padding: 0.5rem 0;
+    }
+
+    .app__menuitem-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .app__menuitem-price {
+        text-align: left;
+        margin-top: 0.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app__menuitem-sub {
+        font-size: 0.9rem;
+    }
+}

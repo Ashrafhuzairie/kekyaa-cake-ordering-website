@@ -1,0 +1,162 @@
+.app__navbar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-crimson);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app__navbar-logo img {
+    width:150px;
+    cursor: pointer;
+}
+
+.app__navbar-links {
+   flex:1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   list-style: none;
+}
+
+.app__navbar-links li a{
+    text-decoration: none;
+    color: var(--color-black);
+    transition: 0.3s ease;
+}
+
+.app__navbar-links li a:hover {
+    color: var(--color-light-blue);
+}
+
+.app__navbar-smallscreen_links a:hover {
+    color: var(--color-light-blue);
+    border-bottom: 1px solid var(--color-light-blue);
+}
+
+.app__navbar-login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.app__navbar-login a {
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.app__navbar-login a:hover {
+    border-bottom: 1px solid var(--color-light-blue);
+}
+
+.navbar-divider {
+    width: 1px;
+    height: 20px;
+    background-color: var(--color-light-blue);
+    margin: 0 1rem;
+}
+
+.app__navbar-smallscreen {
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+.app__navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-crimson);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    animation: slideBottom 0.5s ease;
+}
+
+.overlay__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+.app__navbar-smallscreen-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+    margin-top:3rem;
+}
+
+.app__navbar-smallscreen-links li a {
+    margin: 2rem 0;
+    font-size: 24px;
+    cursor:pointer;
+    color:var(--color-black);
+    font-size: 2rem;
+    text-align: center;
+    font-family:var(--font-base);
+    text-decoration: none;
+}
+
+.app__navbar-smallscreen-links li a:hover {
+    color: var(--color-black);
+}
+
+.app__navbar-smallscreen-links li .book-table-btn {
+    margin-top: 1rem;
+}
+
+
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .app__navbar-smallscreen {
+        display: flex;  /* Show the icon container on mobile */
+    }
+    
+    .menu-icon {
+        display: block;  /* Show hamburger icon */
+    }
+    
+    .app__navbar-links,
+    .app__navbar-login {
+        display: none;  /* Hide desktop menu */
+    }
+}
+
+@media screen and (max-width: 650px) {
+  .app__navbar-logo img {
+    width: 100px;
+  }
+
+  .app__navbar {
+    padding: 1rem;
+  }
+}
