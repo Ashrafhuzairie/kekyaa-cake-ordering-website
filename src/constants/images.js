@@ -19,39 +19,45 @@ import quote from '../assets/quote.png';
 //import gericht from '../assets/gericht.png';
 import cake1 from '../assets/cake1.jpeg';
 import cake2 from '../assets/cake2.jpeg';
-import cake3 from '../assets/cake3.jpeg';
 import cake4 from '../assets/cake4.jpeg';
-import cake5 from '../assets/cake5.jpeg';
 import cake6 from '../assets/cake6.jpeg';
 import cake7 from '../assets/cake7.jpeg';
-import cake8 from '../assets/cake8.jpeg';
 import cake9 from '../assets/cake9.jpeg';
-import cake10 from '../assets/cake10.jpeg';
 import cake11 from '../assets/cake11.jpeg';
 import cake12 from '../assets/cake12.jpeg';
 import cake13 from '../assets/cake13.jpeg';
 import cake14 from '../assets/cake14.jpeg';
-import cake15 from '../assets/cake15.jpeg';
 import cake16 from '../assets/cake16.jpeg';
-import cake17 from '../assets/cake17.jpeg';
-import cake18 from '../assets/cake18.jpeg';
 import cake19 from '../assets/cake19.jpeg';
 import cake20 from '../assets/cake20.jpeg';
+import gallery1 from '../assets/gallery1.jpeg';
+import gallery2 from '../assets/gallery2.jpeg';
+import gallery3 from '../assets/gallery3.jpeg';
+import gallery4 from '../assets/gallery4.jpeg';
+import gallery5 from '../assets/gallery5.jpeg';
+import gallery6 from '../assets/gallery6.jpeg';
+import gallery7 from '../assets/gallery7.jpeg';
+//import G from '../assets/G.png';
 import menu from '../assets/menu.png';
 import baker from '../assets/baker.png';
 import sign from '../assets/sign.png';
+import cakevideo from '../assets/cakevideo.mp4'
 
 export default {
+  cakevideo,
   baker,
   sign,
   bg,
   menu,
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
+  gallery6,
+  gallery7,
   //baker,
   //G,
-  //gallery01,
-  //gallery02,
-  //gallery03,
-  //gallery04,
   knife,
   //logo,
   //menu,
@@ -71,22 +77,15 @@ export default {
   //gericht,
   cake1,
   cake2,
-  cake3,
-  cake4,
-  cake5,
+  cake4, 
   cake6,
-  cake7,
-  cake8,
+  cake7, 
   cake9,
-  cake10,
   cake11,
   cake12,
   cake13,
   cake14,
-  cake15,
   cake16,
-  cake17,
-  cake18,
   cake19,
   cake20,
 };

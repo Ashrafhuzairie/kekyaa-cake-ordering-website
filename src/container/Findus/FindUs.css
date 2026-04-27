@@ -1,0 +1,102 @@
+/* LAYOUT */
+.app__findus-content_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* TITLE */
+.headtext__cormorant {
+  margin-bottom: 2rem;
+}
+
+/* INFO LIST */
+.contact-list p {
+  margin: 0.5rem 0;
+  color: #000000;
+}
+
+/* CTA */
+.cta-text {
+  margin-top: 1.5rem;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000000;
+  text-decoration: none;
+
+  /* premium look */
+  background: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--color-primary);
+}
+
+/* ICON BASE */
+.icon,
+.wa-icon {
+  font-size: 1.3rem;
+}
+
+/* INSTAGRAM (gradient) */
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TIKTOK (visible on dark bg) */
+.tiktok {
+  color: #000000;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  color: #303030;
+}
+
+/* WHATSAPP BUTTON */
+.app__findus-connect {
+  margin-top: 1rem;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+

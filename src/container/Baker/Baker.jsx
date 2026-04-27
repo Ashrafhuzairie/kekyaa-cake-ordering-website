@@ -1,5 +1,5 @@
 import React from 'react';
-import { images , data } from '../../constants';
+import { images } from '../../constants';
 import { SubHeading} from '../../components';
 import './Baker.css';
 
@@ -25,8 +25,9 @@ const Baker = () => (
       </div>
 
       <div className="app__baker-sign">
-          <img src={images.sign} alt="sign img" />
-        <p className="p__opensans">Founder</p>
+        <p>Aliatul Aqilah </p>
+        <p className="p__opensans">Baker & Founder</p>
+        <img src={images.sign} alt="sign img" />
       </div>
     </div>
   </div>
