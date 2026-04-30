@@ -3,13 +3,13 @@ import { BsWhatsapp, BsInstagram, BsTiktok } from 'react-icons/bs';
 import './FindUs.css';
 
 const FindUs = () => (
-  <div className="app__findus flex__center section__padding" id="contact">
+  <div className="app__findus app__bg flex__center section__padding" id="contact">
     
     <div className="app__findus-content flex__center">
       
       <div className="app__findus-content_info">
 
-        <h1 className="headtext__cormorant">Contact Us</h1>
+        <h1 className="headtext__cormorant">How to order?</h1>
 
         {/* INFO */}
         <div className="contact-list">
@@ -18,7 +18,7 @@ const FindUs = () => (
           <p>🚚 Delivery available within Johor Bahru</p>
         </div>
 
-        {/* SOCIAL MEDIA */}
+        {/* SOCIAL MEDIA 
         <div className="social-links">
           <a href="https://instagram.com/kekyaa.cakery" target="_blank" rel="noreferrer">
             <BsInstagram className="icon instagram" />
@@ -29,7 +29,7 @@ const FindUs = () => (
             <BsTiktok className="icon tiktok" />
             TikTok
           </a>
-        </div>
+        </div>*/}
 
         {/* CTA TEXT */}
         <p className="cta-text">

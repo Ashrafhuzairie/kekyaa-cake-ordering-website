@@ -19,12 +19,14 @@ const Navbar = () => {
       <li className="p_opensans"><a href="#home">Home</a></li>
       <li className="p_opensans"><a href="#about">About</a></li>
       <li className="p_opensans"><a href="#menu">Menu</a></li>
-      <li className="p_opensans"><a href="#contact">Contact</a></li>
+      <li className="p_opensans"><a href="#baker">Baker</a></li>
+      <li className="p_opensans"><a href="#intro">Intro</a></li>
+      <li className="p_opensans"><a href="#gallery">Gallery</a></li>
     </ul>
 
-    <div className="app__navbar-login">
+    {/*<div className="app__navbar-login">
       <a href="#login" className="p_opensans">Log In / Register</a>
-    </div>
+    </div> */}
 
     <div className="app__navbar-smallscreen">
       <FaBirthdayCake color="#000000" fontSize={27} className="menu-icon" onClick={() => setToggleMenu(true)}/>
@@ -36,7 +38,9 @@ const Navbar = () => {
               <li className="p_opensans"><a href="#home">Home</a></li>
               <li className="p_opensans"><a href="#about">About</a></li>
               <li className="p_opensans"><a href="#menu">Menu</a></li>
-              <li className="p_opensans"><a href="#contact">Contact</a></li>
+              <li className="p_opensans"><a href="#baker">Baker</a></li>
+              <li className="p_opensans"><a href="#intro">Intro</a></li>
+              <li className="p_opensans"><a href="#gallery">Gallery</a></li>
             </ul>
         </div>
         )}

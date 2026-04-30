@@ -15,6 +15,75 @@ const SpecialMenu = () => (
       <div className="app__specialMenu-cakes">
 
         <div className="app__specialMenu-menu_items">
+
+
+{data.klasik.map((cake, index) => (
+            <div key={index} className="product-group">
+              
+              {/* TITLE */}
+              <p className="product-title">{cake.title}</p>
+
+              <div className="product-title-img">
+                <img src={cake.img} alt={cake.title} />
+              </div>
+
+              {/* VARIANTS */}
+              <div className="product-variants">
+              {cake.variants.map((v, i) => (
+               <div key={i}>
+                  <span>{v.size}</span>
+                  <span>{v.price}</span>
+                </div>
+              ))}
+
+            </div>
+          </div>
+          ))}
+
+          {data.klasikGanache.map((cake, index) => (
+            <div key={index} className="product-group">
+              
+              {/* TITLE */}
+              <p className="product-title">{cake.title}</p>
+
+              <div className="product-title-img">
+                <img src={cake.img} alt={cake.title} />
+              </div>
+
+              {/* VARIANTS */}
+              <div className="product-variants">
+                {cake.variants.map((v, i) => (
+                <div key={i}>
+                  <span>{v.size}</span>
+                  <span>{v.price}</span>
+                </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          {data.indulgenceMousses.map((cake, index) => (
+            <div key={index} className="product-group">
+              
+              {/* TITLE */}
+              <p className="product-title">{cake.title}</p>
+
+              <div className="product-title-img">
+                <img src={cake.img} alt={cake.title} />
+              </div>
+
+              {/* VARIANTS */}
+              <div className="product-variants">
+                {cake.variants.map((v, i) => (
+                <div key={i}>
+                  <span>{v.size}</span>
+                  <span>{v.price}</span>
+                </div>
+                ))}
+              </div>
+          </div>
+          ))}
+
           {data.indulgence.map((cake, index) => (
             <div key={index} className="product-group">
               
@@ -26,60 +95,18 @@ const SpecialMenu = () => (
               </div>
 
               {/* VARIANTS */}
-              {cake.variants.map((v, i) => (
-                <MenuItem
-                  key={i}
-                  title={v.size}
-                  price={v.price}
-                />
-              ))}
-
-            </div>
-          ))} ,
-
-           {data.indulgenceMousses.map((cake, index) => (
-            <div key={index} className="product-group">
-              
-              {/* TITLE */}
-              <p className="product-title">{cake.title}</p>
-
-              <div className="product-title-img">
-                <img src={cake.img} alt={cake.title} />
+              <div className="product-variants">
+                {cake.variants.map((v, i) => (
+                <div key={i}>
+                  <span>{v.size}</span>
+                  <span>{v.price}</span>
+                </div>
+                ))}
               </div>
 
-              {/* VARIANTS */}
-              {cake.variants.map((v, i) => (
-                <MenuItem
-                  key={i}
-                  title={v.size}
-                  price={v.price}
-                />
-              ))}
-
             </div>
-          ))}
-
-           {data.klasik.map((cake, index) => (
-            <div key={index} className="product-group">
-              
-              {/* TITLE */}
-              <p className="product-title">{cake.title}</p>
-
-              <div className="product-title-img">
-                <img src={cake.img} alt={cake.title} />
-              </div>
-
-              {/* VARIANTS */}
-              {cake.variants.map((v, i) => (
-                <MenuItem
-                  key={i}
-                  title={v.size}
-                  price={v.price}
-                />
-              ))}
-
-            </div>
-          ))}
+            
+          ))} 
 
         </div>
 

@@ -1,119 +1,170 @@
+/* ============================================
+   SPECIAL MENU SECTION
+   ============================================ */
+
 .app__specialMenu {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color--golden);
-    padding: 3.5rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color--golden);
+  padding: 3.5rem 2rem;
 }
 
 .app__specialMenu-title {
-    margin: 0 0 1.5rem;
-    text-align: center;
-}
-
-.app__specialMenu-title .headtext__cormorant {
-    margin: 0;
-    font-size: 48px;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .app__specialMenu-menu {
-    display: flex;
-    align-items: flex-start;   
-    justify-content: space-between;
-    gap: 2.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 4rem;
 }
 
 .app__specialMenu-cakes {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; 
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* GRID */
 .app__specialMenu-menu_items {
-    display: flex;
-    flex-wrap: wrap;       
-    gap: 1.5rem;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
-.app__specialMenu-menu_img {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+/* ============================================
+   PRODUCT CARD — box style
+   ============================================ */
+
+.product-group {
+  background: #fff;
+  border: 1.5px solid #e0c87a;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;          /* ← clips anything that bleeds outside the card */
+  min-width: 0;              /* ← fixes grid blowout on narrow screens */
 }
 
-.app__specialMenu-menu_img img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+.product-group:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
-.app__specialMenu-menu_subheading {
-    font-size: 18px;
-    color: var(--color--gold);
-    margin: 1rem 0 0.5rem;
-}
-
-.product-title {
-   
-    justify-content: center;
-    font-family: var(--font--alt);
-    font-size: 18px;
-    color:var(--color--golden);
-
+/* IMAGE */
+.product-title-img {
+  border-radius: 8px;
+  overflow: hidden;         /* clips the image cleanly inside the box */
 }
 
 .product-title-img img {
-    width: 50%;
-    max-width: 600px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
 }
 
-
-@media screen and (max-width: 900px) {
-    .app__specialMenu {
-        padding: 2rem 0;
-    }
-
-    .app__specialMenu-menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .app__specialMenu-cakes {
-        align-items: center;
-    }
-
-    .app__specialMenu-menu_items {
-        justify-content: center; 
-    }
-
-    .app__specialMenu-menu_img {
-        justify-content: center;
-    }
-
-    .app__specialMenu-menu_img img {
-        max-width: 480px;
-    }
+/* DIVIDER between image and content */
+.product-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a1a;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0e5b0;   /* subtle golden underline */
 }
 
-@media screen and (max-width: 480px) {
-    .app__specialMenu-title .headtext__cormorant {
-        font-size: 32px;
-    }
+/* VARIANTS */
+.product-variants {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  overflow:hidden;
+  max-width: 100%;
+  word-break: break-word;
+}
 
-    .app__specialMenu-menu_img img {
-        max-width: 320px;
-    }
+.product-variants div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2px;
+  border-bottom: 1px solid #f0e5b0;
+  font-size: 13px;
+}
+
+.product-variants div:last-child {
+  border-bottom: none;
+}
+
+.product-variants span:first-child {
+  color: #555;
+  white-space: nowrap;
+}
+
+.product-variants span:last-child {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .app__specialMenu-menu_items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .app__specialMenu-menu_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .app__specialMenu {
+    padding: 2rem 1rem;
+  }
+
+  .app__specialMenu-menu {
+    padding: 0;              /* remove side padding on mobile */
+  }
+
+  .app__specialMenu-menu_items {
+    grid-template-columns: 1fr;   /* single column on phone */
+    gap: 1rem;
+  }
+
+  .product-title-img img {
+    height: 200px;           /* taller image on single column */
+  }
+}
+
+@media (max-width: 360px) {
+  .app__specialMenu-menu_items {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .product-title {
+    font-size: 13px;
+  }
+
+  .product-variants div {
+    font-size: 12px;
+  }
 }
