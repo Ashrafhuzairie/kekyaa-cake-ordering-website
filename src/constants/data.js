@@ -1,74 +1,59 @@
-import images from './images';
+import images from "./images"
 
-const cakes = [
+const indulgence = [
   {
-    title: 'Kek Batik Indulgence 9',
-    price: 'RM105',
-    tags: 'Rich chocolate | Premium biscuits | Buttery texture | 9 inch',
-  },
-  {
-    title: 'Kek Batik Indulgence 8',
-    price: 'RM85',
-    tags: 'Rich chocolate | Premium biscuits | Buttery texture | 8 inch',
-  },
-  {
-    title: 'Kek Batik Indulgence 6',
-    price: 'RM50',
-    tags: 'Rich chocolate | Premium biscuits | Buttery texture | 6 inch',
-  },
-  {
-    title: 'Kek Batik Indulgence Mousses 9',
-    price: 'RM115',
-    tags: 'Chocolate mousse | Premium layer | Smooth finish | 9 inch',
-  },
-  {
-    title: 'Kek Batik Indulgence Mousses 8',
-    price: 'RM95',
-    tags: 'Chocolate mousse | Premium layer | Smooth finish | 8 inch',
-  },
-  {
-    title: 'Kek Batik Indulgence Mousses 6',
-    price: 'RM60',
-    tags: 'Chocolate mousse | Premium layer | Smooth finish | 6 inch',
-  },
-  {
-    title: 'Kek Batik Klasik 7',
-    price: 'RM45',
-    tags: 'Traditional recipe | Chocolate biscuits | Homemade taste | 7 inch',
-  },
-  {
-    title: 'Kek Batik Klasik 6',
-    price: 'RM40',
-    tags: 'Traditional recipe | Chocolate biscuits | Homemade taste | 6 inch',
+    title: 'Kek Batik Indulgence',
+    variants: [
+      {size: '6"', price:'RM55'},
+      {size: '8"', price:'RM85'},
+      {size: '9"', price:'RM105'},
+    ],
+
+    img: images.cake6,
   }
-];
+]
 
-// const awards = [
-//   {
-//     imgUrl: images.award02,
-//     title: 'Bib Gourmond',
-//     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-//   },
-//   {
-//     imgUrl: images.award01,
-//     title: 'Rising Star',
-//     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-//   },
-//   {
-//     imgUrl: images.award05,
-//     title: 'AA Hospitality',
-//     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-//   },
-//   {
-//     imgUrl: images.award03,
-//     title: 'Outstanding Baker',
-//     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-//   },
-// ];
+const indulgenceMousses =[
+  {
+    title: 'Kek Batik Indulgence Mousses',
+    variants: [
+      {size: '6"', price:'RM60'},
+      {size: '8"', price:'RM95'},
+      {size: '9"', price:'RM110'},
+    ],
 
+    img: images.cake4,
+  }
+]
 
+const klasikGanache =[
 
+    {
+    title: 'Kek Batik Klasik Ganache',
+    variants: [
+      {size: '6"', price:'RM40'},
+      {size: '7"', price:'RM50'},
+      {size: '8"', price:'RM60'},
+      {size: '9"', price:'RM80'},
+    ],
 
-export default { cakes };
+    img: images.cake19,
+  }
+]
 
-// export default { cakes, awards };
+const klasik =[
+
+    {
+    title: 'Kek Batik Klasik',
+    variants: [
+      {size: '6"', price:'RM30'},
+      {size: '7"', price:'RM40'},
+      {size: '8"', price:'RM50'},
+      {size: '9"', price:'RM60'},
+    ],
+
+    img: images.cake1,
+  }
+]
+
+export default { indulgence, indulgenceMousses,klasikGanache, klasik };

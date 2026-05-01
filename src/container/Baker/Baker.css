@@ -4,15 +4,29 @@
     font-weight: 700;
 }
 
-/* Baker section-specific layout: scope to #baker so global wrappers remain untouched */
-#baker .app__wrapper_img {
+.app__baker-sign img{
+    width:1000px;
+    margin-top:1rem;
+}
+
+.app__baker-sign p:first-child{
+    font-family: var(--font-base);
+    font-size: 50;
+    font-weight:600;
+    line-height:41px;
+    letter-spacing: 0.04em;
+    text-transform:capitalize;
+    color:var(--color-golden);
+}
+
+.app__wrapper_img {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
 }
 
-#baker .app__wrapper_img img {
+.app__wrapper_img img {
     display: block;
     width: 100%;
     max-width: 480px;
@@ -22,23 +36,26 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-#baker .app__baker-content {
+.app__baker-content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#baker .app__baker-content_quote {
+.app__baker-content_quote {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
 }
 
-@media screen and (max-width: 900px) {
-    #baker .app__wrapper_img img ,
-    #baker .app__baker-content_quote ,
-    #baker .app__baker-content ,
-    #baker .app__baker-sign {  
-         max-width: 360px;
+@media screen and (max-width:2000px) {
+    .app__baker-sign img{
+        width:370px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .app__baker-sign img{
+        width:80%;
     }
 }
